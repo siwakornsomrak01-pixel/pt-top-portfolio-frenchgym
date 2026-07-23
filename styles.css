@@ -1848,7 +1848,7 @@ button, input, select, textarea {
 /* Toast alert notification styling */
 .toast-notification {
     position: fixed;
-    bottom: -80px;
+    bottom: -120px;
     left: 50%;
     transform: translateX(-50%);
     background: #00e676;
@@ -1862,12 +1862,17 @@ button, input, select, textarea {
     gap: 10px;
     box-shadow: 0 10px 25px rgba(0, 230, 118, 0.3);
     z-index: 10000;
-    transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    pointer-events: none;
+    transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
 }
 
 .toast-notification.show {
     bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
 }
+
 
 /* --- Certificate Lightbox Modal --- */
 .cert-modal {
