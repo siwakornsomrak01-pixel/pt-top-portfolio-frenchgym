@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT TOP - Siwakorn Somrak | Personal Trainer Showcase</title>
+    <meta name="description" content="โปรไฟล์เทรนเนอร์ PT TOP (ศิวกร สมรักษ์) - ความเชี่ยวชาญการลดไขมัน สร้างกล้ามเนื้อ โภชนาการ และใบรับรองผู้เชี่ยวชาญ">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Glow Effect -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-grid-overlay"></div>
+
+    <div class="app-container">
+        <!-- Header / Navigation Bar -->
+        <header class="navbar">
+            <div class="brand-logo">
+                <span class="brand-pt">PT</span>
+                <span class="brand-top">TOP</span>
+                <span class="badge-verified"><i class="fa-solid fa-circle-check"></i> CERTIFIED</span>
+            </div>
+            <div class="gym-affiliation">
+                <i class="fa-solid fa-dumbbell"></i> FREELANCE PERSONAL TRAINER
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-grid">
+                <!-- Headline Container -->
+                <div class="headline-container">
+                    <h2 class="hero-title"><span class="title-solid">PERSONAL</span> <span class="title-outline">TRAINER</span></h2>
+                </div>
+
+                <!-- Profile Image Frame -->
+                <div class="profile-card-wrapper">
+                    <div class="profile-frame">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent top-right"></div>
+                        <div class="corner-accent bottom-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        
+                        <!-- Trainer Photo -->
+                        <div class="profile-img-container">
+                            <img src="assets/pt_top_profile_alt.jpg" alt="PT TOP - Siwakorn Somralk" id="trainer-photo" onerror="if(this.src.indexOf('pt_top_profile_alt.jpg')!==-1){this.src='assets/pt_top_profile.jpg';}">
+                            <div class="live-badge">
+                                <span class="pulse-dot"></span> ACTIVE TRAINER
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="trainer-identity">
+                        <h1 class="pt-name-main">PT TOP</h1>
+                        <p class="pt-name-sub">SIWAKORN SOMRAK</p>
+                        <div class="name-underline"></div>
+                        
+                        <!-- Compact Certificate Badges -->
+                        <div class="profile-certs-preview">
+                            <div class="cert-badge-compact" onclick="openCertModal('cert-1')" title="คลิกเพื่อซูมดูใบเซอร์เต็ม">
+                                <i class="fa-solid fa-award cert-gold"></i>
+                                <span>FIC - PESA</span>
+                                <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                            </div>
+                            <div class="cert-badge-compact" onclick="openCertModal('cert-2')" title="คลิกเพื่อซูมดูใบเซอร์เต็ม">
+                                <i class="fa-solid fa-graduation-cap cert-red"></i>
+                                <span>CHULA MOOC</span>
+                                <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio & Details Content (Bio Box & Highlights removed as requested) -->
+                <div class="hero-content">
+                    <!-- New Premium Hero Navigation Shortcuts (With added CTA "สนใจเทรน" button at the bottom) -->
+                    <div class="hero-shortcuts-container">
+                        <span class="shortcuts-title"><i class="fa-solid fa-compass-drafting"></i> แผงนำทางด่วน (Quick Navigation Panel):</span>
+                        <div class="shortcuts-grid">
+                            <button onclick="scrollToSection('trainer-journey')" class="sc-btn sc-journey">
+                                <span class="sc-icon-wrapper"><i class="fa-solid fa-route"></i></span>
+                                <div class="sc-text-wrapper">
+                                    <span class="sc-main-text">ประวัติ PT TOP</span>
+                                    <span class="sc-sub-text">เส้นทางเปลี่ยนหุ่น</span>
+                                </div>
+                            </button>
+                            <button onclick="scrollToSection('client-transformation')" class="sc-btn sc-clients">
+                                <span class="sc-icon-wrapper"><i class="fa-solid fa-fire-flame-curved"></i></span>
+                                <div class="sc-text-wrapper">
+                                    <span class="sc-main-text">ผลลัพธ์นักเรียน</span>
+                                    <span class="sc-sub-text">Before & After</span>
+                                </div>
+                            </button>
+                            <button onclick="openCertModal('cert-1')" class="sc-btn sc-cert">
+                                <span class="sc-icon-wrapper"><i class="fa-solid fa-award"></i></span>
+                                <div class="sc-text-wrapper">
+                                    <span class="sc-main-text">ใบเซอร์ผู้เชี่ยวชาญ</span>
+                                    <span class="sc-sub-text">คลิกเปิดดูรูปใบจริง</span>
+                                </div>
+                            </button>
+                            <button onclick="scrollToSection('duo-training')" class="sc-btn sc-duo">
+                                <span class="sc-icon-wrapper"><i class="fa-solid fa-user-group"></i></span>
+                                <div class="sc-text-wrapper">
+                                    <span class="sc-main-text">แพ็กเกจเทรนคู่ 2:1</span>
+                                    <span class="sc-sub-text">ประหยัด คุ้มค่าที่สุด</span>
+                                </div>
+                            </button>
+                            
+                            <!-- 5th Button: CTA booking button (full width) -->
+                            <button onclick="scrollToSection('booking-footer')" class="sc-btn sc-cta-nav">
+                                <span class="sc-icon-wrapper"><i class="fa-solid fa-calendar-check text-red"></i></span>
+                                <div class="sc-text-wrapper">
+                                    <span class="sc-main-text text-red">สนใจสมัครเทรน</span>
+                                    <span class="sc-sub-text">ติดต่อเพจยิม French Gym เพื่อจองคิวเทรนเนอร์ท็อป</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider Line with Red Accent -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- 1. Trainer's Personal Journey Transformation Section -->
+        <section class="trainer-transformation-section" id="trainer-journey">
+            <div class="section-header">
+                <span class="section-subtitle">WALK THE TALK • TRAINER'S STORY</span>
+                <h2 class="section-title"><i class="fa-solid fa-route"></i> เส้นทางเปลี่ยนหุ่นของผม (PT TOP's Personal Journey)</h2>
+                <p class="section-desc">พิสูจน์ผลลัพธ์ผ่านประสบการณ์ส่วนตัว จากจุดลองผิดลองถูกสู่ความเข้าใจลึกซึ้งของการจัดสารอาหารและการฝึกซ้อม</p>
+            </div>
+
+            <div class="trainer-journey-card">
+                <!-- Left: Media Column (Video Showcase & Image Comparison) -->
+                <div class="journey-media-col">
+                    <!-- Video Loop -->
+                    <div class="journey-video-frame">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent top-right"></div>
+                        <div class="corner-accent bottom-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="journey-video-wrapper">
+                            <video autoplay loop muted playsinline preload="auto">
+                                <source src="assets/topshowcase.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <span class="v-category-badge journey-badge"><i class="fa-solid fa-person-running"></i> MY SHOWCASE VIDEO</span>
+                                <button class="sound-toggle-btn" title="เปิด/ปิดเสียง"><i class="fa-solid fa-volume-xmark"></i> Muted</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Side-by-Side Image Comparison -->
+                    <div class="journey-image-frame" onclick="openComparisonLightbox()">
+                        <img src="assets/top_comparison.jpg" alt="PT TOP Comparison Photo" id="top-comparison-img" onerror="this.style.display='none'">
+                        <div class="image-zoom-hint">
+                            <i class="fa-solid fa-maximize"></i> แตะเพื่อซูมดูรูปเปรียบเทียบหุ่นเต็มจอ
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Storytelling & InBody Progression -->
+                <div class="journey-content-col">
+                    <!-- Premium High-Tech Stat Dashboard Box -->
+                    <div class="visual-comparison-box">
+                        <div class="comp-header">
+                            <i class="fa-solid fa-chart-simple text-red"></i> <strong>ดัชนีการเปลี่ยนร่างจริง (PT TOP Body Progression)</strong>
+                        </div>
+                        <div class="comp-table">
+                            <div class="comp-row comp-head">
+                                <div>เกณฑ์การวัดสัดส่วน</div>
+                                <div>ช่วง Bulk พีคสูงสุด</div>
+                                <div>ช่วงลีนปัจจุบัน</div>
+                                <div>ผลลัพธ์พัฒนาการ</div>
+                            </div>
+                            <div class="comp-row">
+                                <div class="comp-label"><i class="fa-solid fa-weight-scale text-muted"></i> น้ำหนักตัว</div>
+                                <div class="val-bad">85.0 kg</div>
+                                <div class="val-good">77.8 kg</div>
+                                <div class="val-change down"><i class="fa-solid fa-circle-down"></i> ลดลง -7.2 kg</div>
+                            </div>
+                            <div class="comp-row">
+                                <div class="comp-label"><i class="fa-solid fa-percent text-muted"></i> เปอร์เซ็นต์ไขมัน</div>
+                                <div class="val-bad">26.1%</div>
+                                <div class="val-good">16.0%</div>
+                                <div class="val-change down"><i class="fa-solid fa-circle-down"></i> ลีนออก -10.1%</div>
+                            </div>
+                            <div class="comp-row">
+                                <div class="comp-label"><i class="fa-solid fa-dumbbell text-muted"></i> มวลกล้ามเนื้อ (SMM)</div>
+                                <div class="val-bad">30.6 kg</div>
+                                <div class="val-good">37.2 kg</div>
+                                <div class="val-change up"><i class="fa-solid fa-circle-up"></i> เพิ่มขึ้น +6.6 kg</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-timeline">
+                        <!-- Stage 1: Skinny Start -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot red-glow">1</div>
+                            <div class="timeline-content-card">
+                                <div class="timeline-card-header">
+                                    <h4>จุดเริ่มต้น: เด็กหนุ่มผอมโซ ไร้ตารางฝึก</h4>
+                                    <span class="timeline-badge badge-gray">ผอม ไร้กล้ามเนื้อ</span>
+                                </div>
+                                <p>ซ้อมแบบสุ่มตามยูทูป ไม่จดสถิติ กินน้อย สารอาหารไม่ถึง ทำให้น้ำหนักตัวไม่คืบหน้า</p>
+                            </div>
+                        </div>
+
+                        <!-- Stage 2: Dirty Bulk -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot red-glow">2</div>
+                            <div class="timeline-content-card border-warning">
+                                <div class="timeline-card-header">
+                                    <h4>Dirty Bulk: ยัดอาหารจนตัวหนาอึดอัด</h4>
+                                    <span class="timeline-badge badge-warning">น้ำหนัก 85kg • ไขมัน 26.1%</span>
+                                </div>
+                                <p>กินทุกอย่าง ของหวาน ของมัน หวังเพิ่มกล้าม ผลลัพธ์คือน้ำหนักพุ่งพร้อม<strong>ไขมันพอกพูน อึดอัด เหนื่อยง่าย</strong></p>
+                            </div>
+                        </div>
+
+                        <!-- Stage 3: Scientific Cut -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot red-glow">3</div>
+                            <div class="timeline-content-card border-change">
+                                <div class="timeline-card-header">
+                                    <h4>จุดเปลี่ยน: ซ้อม Overload & คุมอาหารตามโภชนาการ</h4>
+                                    <span class="timeline-badge badge-change">Flexible Diet & Cardio</span>
+                                </div>
+                                <p>ปรับตารางซ้อมจดสถิติน้ำหนักเหล็กอย่างละเอียด คุมสารอาหาร <strong>ลีนไขมันออกโดยคงกล้ามเนื้อไว้</strong></p>
+                            </div>
+                        </div>
+
+                        <!-- Stage 4: Aesthetic Result -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot red-glow">4</div>
+                            <div class="timeline-content-card border-success">
+                                <div class="timeline-card-header">
+                                    <h4>ปัจจุบัน: หุ่นสมส่วน ลีนกระชับ ฟิตเต็มพิกัด</h4>
+                                    <span class="timeline-badge badge-success">น้ำหนัก 77.8kg • กล้ามเพิ่ม +6.6kg</span>
+                                </div>
+                                <p>กล้ามคมชัด แข็งแรงขึ้น สุขภาพปอด/หัวใจดีจากการคาร์ดิโอ ระบบเผาผลาญสมบูรณ์แบบ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trainer-closing-philosophy">
+                        <i class="fa-solid fa-shield-halved text-red"></i>
+                        <span>"เพราะผมเคยผ่านช่วงที่หุ่นแย่และอึดอัดตัวมาก่อน ผมจึงเข้าใจความรู้สึกของคุณดีที่สุด และพร้อมแชร์ประสบการณ์ลัดเพื่อความปลอดภัยของคุณครับ"</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider Line with Red Accent -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- 2. Storytelling Before & After Feature Showcase Section -->
+        <section class="transformation-spotlight-section" id="client-transformation">
+            <div class="section-header">
+                <span class="section-subtitle">REAL CLIENT TRANSFORMATION STORIES</span>
+                <h2 class="section-title"><i class="fa-solid fa-fire-flame-curved"></i> เคสผลลัพธ์การเทรนของนักเรียน (Success Stories)</h2>
+                <p class="section-desc">เลือกเปลี่ยนแผ่นสไลด์เพื่อดูเรื่องราวของนักเรียนท่านอื่นที่ผลลัพธ์ผ่านเกณฑ์มาตรฐานของ PT TOP</p>
+            </div>
+
+            <!-- Redesigned High-Visibility Tab Selector Navigation -->
+            <div class="client-navigation-wrapper">
+                <div class="nav-helper-text">
+                    <span class="pulse-dot"></span> คลิกชื่อนักเรียนเพื่อสลับดูผลลัพธ์แบบเจาะลึก
+                </div>
+                <div class="client-tabs-container">
+                    <button class="client-tab-btn active" id="btn-tab-patty" onclick="switchClientTab('patty')">
+                        <span class="case-number">01</span>
+                        <div class="btn-label-group">
+                            <span class="btn-main-label">คุณ Patty</span>
+                            <span class="btn-sub-label">สายเพิ่มกล้ามเนื้อ & ปรับโภชนาการ</span>
+                        </div>
+                    </button>
+                    <button class="client-tab-btn" id="btn-tab-nasai" onclick="switchClientTab('nasai')">
+                        <span class="case-number">02</span>
+                        <div class="btn-label-group">
+                            <span class="btn-main-label">คุณนาทราย</span>
+                            <span class="btn-sub-label">สายลดไขมัน & ปั้นก้น/สะโพก</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Patty's Spotlight Card -->
+            <div class="spotlight-card client-case-card active" id="case-patty">
+                <!-- Left Column: Storytelling Video Loop -->
+                <div class="spotlight-video-col">
+                    <div class="spotlight-video-frame">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent top-right"></div>
+                        <div class="corner-accent bottom-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        
+                        <div class="spotlight-video-wrapper">
+                            <video autoplay loop muted playsinline preload="auto">
+                                <source src="assets/storytelling_transformation_Patty.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <span class="v-category-badge story-badge"><i class="fa-solid fa-film"></i> CLIENT STORYTELLING</span>
+                                <button class="sound-toggle-btn" title="เปิด/ปิดเสียง"><i class="fa-solid fa-volume-xmark"></i> Muted</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: InBody Verified Stats & Charts -->
+                <div class="spotlight-stats-col">
+                    <div class="client-meta-bar">
+                        <div class="client-info">
+                            <span class="client-tag"><i class="fa-solid fa-user-check"></i> CASE STUDY #1</span>
+                            <h3 class="client-name">คุณ Patty</h3>
+                            <span class="client-duration"><i class="fa-regular fa-calendar-check"></i> ระยะเวลา 11 สัปดาห์ (พ.ค. - ก.ค. 2026)</span>
+                        </div>
+                        <div class="inbody-badge">
+                            <i class="fa-solid fa-microchip"></i> INBODY DATA VERIFIED
+                        </div>
+                    </div>
+
+                    <!-- Highlight Metric Badges Grid -->
+                    <div class="stats-badge-grid">
+                        <div class="stat-box box-red">
+                            <div class="stat-head">
+                                <span class="stat-label">มวลกล้ามเนื้อ (SMM)</span>
+                                <span class="stat-arrow up"><i class="fa-solid fa-arrow-trend-up"></i> +1.8 kg</span>
+                            </div>
+                            <div class="stat-value">30.2 <span class="unit">kg</span></div>
+                            <div class="stat-compare">เพิ่มขึ้นจาก 28.4 kg</div>
+                        </div>
+
+                        <div class="stat-box box-dark">
+                            <div class="stat-head">
+                                <span class="stat-label">อัตราเผาผชาญ (BMR)</span>
+                                <span class="stat-arrow up"><i class="fa-solid fa-bolt"></i> +65 kcal</span>
+                            </div>
+                            <div class="stat-value">1,541 <span class="unit">kcal</span></div>
+                            <div class="stat-compare">เพิ่มขึ้นจาก 1,476 kcal</div>
+                        </div>
+
+                        <div class="stat-box box-dark">
+                            <div class="stat-head">
+                                <span class="stat-label">ไขมันร่างกาย (% Fat)</span>
+                                <span class="stat-arrow down"><i class="fa-solid fa-shield-heart"></i> ลีนกระชับ</span>
+                            </div>
+                            <div class="stat-value">6.4 <span class="unit">%</span></div>
+                            <div class="stat-compare">เปอร์เซ็นต์ไขมันต่ำ หุ่นลีนมีมิติ</div>
+                        </div>
+
+                        <div class="stat-box box-dark">
+                            <div class="stat-head">
+                                <span class="stat-label">คะแนน InBody Score</span>
+                                <span class="stat-arrow up"><i class="fa-solid fa-star"></i> +3 คะแนน</span>
+                            </div>
+                            <div class="stat-value">67 <span class="unit">/ 100</span></div>
+                            <div class="stat-compare">เพิ่มขึ้นจาก 64 คะแนน</div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Visual Chart -->
+                    <div class="inbody-chart-container">
+                        <div class="chart-header">
+                            <h4><i class="fa-solid fa-chart-line text-red"></i> กราฟพัฒนาการมวลกล้ามเนื้อ (Muscle Mass Progression)</h4>
+                            <span class="chart-period">30 เม.ย. - 13 ก.ค. 2026</span>
+                        </div>
+                        
+                        <div class="custom-progress-chart">
+                            <div class="chart-bar-group">
+                                <div class="bar-label-info">
+                                    <span>เมษายน (เริ่มต้น)</span>
+                                    <span class="bar-val">28.4 kg</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill" style="width: 70%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="chart-bar-group">
+                                <div class="bar-label-info">
+                                    <span>พฤษภาคม</span>
+                                    <span class="bar-val">29.1 kg</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill" style="width: 82%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="chart-bar-group active-target">
+                                <div class="bar-label-info">
+                                    <span>กรกฎาคม (ปัจจุบัน)</span>
+                                    <span class="bar-val highlight-val">30.2 kg (+1.8 kg)</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill fill-red" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trainer Insight Box -->
+                    <div class="trainer-note-box">
+                        <i class="fa-solid fa-quote-left note-quote"></i>
+                        <p class="note-text">
+                            <strong>PT TOP Insight:</strong> "เคสคุณ Patty เน้นการเพิ่มมวลกล้ามเนื้อสุทธิอย่างยั่งยืน วางโปรแกรม Weight Training แบบ Hypertrophy Split และคำนวณโภชนาการช่วยเพิ่มอัตราเผาผลาญ BMR สูงขึ้น ผลลัพธ์คือเพิ่มมวลกล้ามเนื้อได้ถึง +1.8 kg หุ่นเฟิร์มกระชับและสมรรถภาพร่างกายสูงขึ้นชัดเจนครับ"
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nasai's Spotlight Card -->
+            <div class="spotlight-card client-case-card" id="case-nasai">
+                <!-- Left Column: Storytelling Video Loop -->
+                <div class="spotlight-video-col">
+                    <div class="spotlight-video-frame">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent top-right"></div>
+                        <div class="corner-accent bottom-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        
+                        <div class="spotlight-video-wrapper">
+                            <video loop muted playsinline preload="none">
+                                <source src="assets/nasai_showcase.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <span class="v-category-badge story-badge"><i class="fa-solid fa-film"></i> CLIENT STORYTELLING</span>
+                                <button class="sound-toggle-btn" title="เปิด/ปิดเสียง"><i class="fa-solid fa-volume-xmark"></i> Muted</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: InBody Verified Stats & Charts -->
+                <div class="spotlight-stats-col">
+                    <div class="client-meta-bar">
+                        <div class="client-info">
+                            <span class="client-tag"><i class="fa-solid fa-user-check"></i> CASE STUDY #2 (ลูกเทรนผู้หญิง)</span>
+                            <h3 class="client-name">คุณนาทราย</h3>
+                            <span class="client-duration"><i class="fa-regular fa-calendar-check"></i> ระยะเวลา 8 สัปดาห์ (พ.ย. - ธ.ค. 2025)</span>
+                        </div>
+                        <div class="inbody-badge">
+                            <i class="fa-solid fa-microchip"></i> INBODY DATA VERIFIED
+                        </div>
+                    </div>
+
+                    <!-- Highlight Metric Badges Grid -->
+                    <div class="stats-badge-grid">
+                        <!-- Stat 1: Muscle Gain -->
+                        <div class="stat-box box-red">
+                            <div class="stat-head">
+                                <span class="stat-label">มวลกล้ามเนื้อ (SMM)</span>
+                                <span class="stat-arrow up"><i class="fa-solid fa-arrow-trend-up"></i> +1.4 kg</span>
+                            </div>
+                            <div class="stat-value">20.0 <span class="unit">kg</span></div>
+                            <div class="stat-compare">เพิ่มขึ้นจาก 18.6 kg</div>
+                        </div>
+
+                        <!-- Stat 2: Body Fat Drop -->
+                        <div class="stat-box box-dark">
+                            <div class="stat-head">
+                                <span class="stat-label">ไขมันร่างกาย (% Fat)</span>
+                                <span class="stat-arrow down"><i class="fa-solid fa-arrow-trend-down"></i> -2.1%</span>
+                            </div>
+                            <div class="stat-value">31.3 <span class="unit">%</span></div>
+                            <div class="stat-compare">ลดลงจาก 33.4%</div>
+                        </div>
+
+                        <!-- Stat 3: Silhouette Shape -->
+                        <div class="stat-box box-dark">
+                            <div class="stat-head">
+                                <span class="stat-label">เป้าหมายรูปร่าง</span>
+                                <span class="stat-arrow up"><i class="fa-solid fa-venus"></i> ปั้นก้น & สะโพก</span>
+                            </div>
+                            <div class="stat-value">GLUTE <span class="unit">FOCUS</span></div>
+                            <div class="stat-compare">ก้นกลมมน ทรวดทรงโค้งเว้าชัดเจน</div>
+                        </div>
+
+                        <!-- Stat 4: Weight Progress -->
+                        <div class="stat-box box-dark">
+                            <div class="stat-head">
+                                <span class="stat-label">น้ำหนัก (Body Recomp)</span>
+                                <span class="stat-arrow up"><i class="fa-solid fa-arrows-up-down"></i> กล้ามเพิ่มไขมันลด</span>
+                            </div>
+                            <div class="stat-value">54.8 <span class="unit">kg</span></div>
+                            <div class="stat-compare">สัดส่วนกระชับขึ้น แม้น้ำหนักเพิ่มขึ้น</div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Visual Chart -->
+                    <div class="inbody-chart-container">
+                        <div class="chart-header">
+                            <h4><i class="fa-solid fa-chart-line text-red"></i> กราฟพัฒนาการมวลกล้ามเนื้อก้น & สะโพก (Muscle Mass Progression)</h4>
+                            <span class="chart-period">4 พ.ย. - 30 ธ.ค. 2025</span>
+                        </div>
+                        
+                        <div class="custom-progress-chart">
+                            <!-- Progress Bar Items -->
+                            <div class="chart-bar-group">
+                                <div class="bar-label-info">
+                                    <span>พฤศจิกายน (เริ่มต้น)</span>
+                                    <span class="bar-val">18.6 kg</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill" style="width: 75%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="chart-bar-group">
+                                <div class="bar-label-info">
+                                    <span>กลางเดือนธันวาคม</span>
+                                    <span class="bar-val">19.3 kg</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill" style="width: 88%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="chart-bar-group active-target">
+                                <div class="bar-label-info">
+                                    <span>สิ้นเดือนธันวาคม (ปัจจุบัน)</span>
+                                    <span class="bar-val highlight-val">20.0 kg (+1.4 kg)</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill fill-red" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trainer Insight Box -->
+                    <div class="trainer-note-box">
+                        <i class="fa-solid fa-quote-left note-quote"></i>
+                        <p class="note-text">
+                            <strong>PT TOP Insight:</strong> "เคสคุณนาทรายเน้นการลดไขมันร่างกายพร้อมสร้างทรวดทรงก้นสะโพก (Glutes Focus) แม้ด้วยระยะเวลาจำกัดเพียง 8 สัปดาห์ อาจจะยังไม่ได้หุ่นเป้าหมายสูงสุด 100% แต่ผลประกอบการโดยรวมทั้งมวลกล้ามเนื้อที่เพิ่มขึ้น (+1.4 kg) และไขมันร่างกายที่ลดลง ดีขึ้นอย่างชัดเจน เป็นรากฐานที่ยอดเยี่ยมสำหรับการพัฒนาต่อยอดต่อไปครับ"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider Line with Red Accent -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- 3. Duo Personal Training Showcase Section (2-on-1 Package) -->
+        <section class="duo-training-section" id="duo-training">
+            <div class="section-header">
+                <span class="section-subtitle">SMART & VALUE TRAINING PACKAGE</span>
+                <h2 class="section-title"><i class="fa-solid fa-people-carry-box"></i> แพ็กเกจเทรนคู่ 2 ต่อ 1 (Duo Personal Training)</h2>
+                <p class="section-desc">คุ้มค่ากว่า ควงคู่มาเทรนด้วยกัน ได้ทั้งชาย-หญิง พร้อมตารางวางแผนเฉพาะบุคคลอย่างลงตัว</p>
+            </div>
+
+            <div class="duo-card">
+                <!-- Left Column: Duo Training Video Showcase -->
+                <div class="duo-video-col">
+                    <div class="duo-video-frame">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent top-right"></div>
+                        <div class="corner-accent bottom-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+
+                        <div class="duo-video-wrapper">
+                            <video autoplay loop muted playsinline preload="auto">
+                                <source src="assets/arm_ill_showcase.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <span class="v-category-badge duo-badge"><i class="fa-solid fa-user-group"></i> 2 ต่อ 1 DUO SHOWCASE</span>
+                                <button class="sound-toggle-btn" title="เปิด/ปิดเสียง"><i class="fa-solid fa-volume-xmark"></i> Muted</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Sales Content & Value Proposition -->
+                <div class="duo-content-col">
+                    <div class="duo-headline-box">
+                        <span class="value-tag"><i class="fa-solid fa-piggy-bank"></i> คุ้มค่าที่สุด • ประหยัดกว่าเทรนเดี่ยว</span>
+                        <h3 class="duo-main-title">เทรนคู่ 2 ต่อ 1 ดียังไง?</h3>
+                        <p class="duo-intro">
+                            ทางเลือกสุดคุ้มสำหรับเพื่อน คู่รัก หรือคนสนิท ที่อยากเริ่มต้นออกกำลังกายร่วมกัน <strong>หารเฉลี่ยค่าบริการถูกกว่าการเทรนตัวต่อตัว</strong> โดยยังคงได้รับการจัดท่า แกะรายละเอียด และการวางแผนดูแลจาก PT TOP แบบใกล้ชิดเข้มข้น 100% เท่าเดิม
+                        </p>
+                    </div>
+
+                    <!-- Highlights Feature List -->
+                    <div class="duo-highlights-grid">
+                        <!-- Point 1: Gender Flexibility -->
+                        <div class="duo-feature-item">
+                            <div class="df-icon"><i class="fa-solid fa-mars-and-venus"></i></div>
+                            <div class="df-text">
+                                <h4>ชาย - หญิง ก็เทรนด้วยกันได้อย่างลงตัว!</h4>
+                                <p>แม้เป้าหมายและโครงสร้างร่างกายจะต่างกัน (ชายเน้นสร้างกล้ามเนื้อ / หญิงเน้นกระชับสัดส่วนและลดไขมัน) PT TOP สามารถออกแบบโปรแกรมและจัดตารางซ้อมแยกเฉพาะบุคคลในชั่วโมงเดียวกันได้อย่างมืออาชีพ</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 2: Cost Savings -->
+                        <div class="duo-feature-item">
+                            <div class="df-icon"><i class="fa-solid fa-tags"></i></div>
+                            <div class="df-text">
+                                <h4>ประหยัดกว่า คุ้มค่าสบายกระเป๋า</h4>
+                                <p>หารเฉลี่ยราคาต่อคนถูกกว่าเทรนเดี่ยว ได้คุณภาพการโค้ช การจัดท่าทาง และความใส่ใจระดับพรีเมียมเท่าเดิม</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 3: Fun & Motivation -->
+                        <div class="duo-feature-item">
+                            <div class="df-icon"><i class="fa-solid fa-face-smile-beam"></i></div>
+                            <div class="df-text">
+                                <h4>สนุก ไม่เหงา ได้แรงผลักดันคู่กัน</h4>
+                                <p>บรรยากาศการเทรนเป็นกันเอง มีเพื่อนคอยส่งพลัง คอยเชียร์ และกระตุ้นวินัยซึ่งกันและกัน ทำให้มาเทรนสม่ำเสมอและถึงเป้าหมายได้เร็วยิ่งขึ้น</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Callout Note for Gym Desk Contact -->
+                    <div class="duo-callout-box">
+                        <i class="fa-solid fa-bullhorn text-red"></i>
+                        <span>สนใจควงคู่มาเทรนแพ็กเกจ 2 ต่อ 1 สามารถส่งข้อความสมัครเทรนกับผมได้ผ่านปุ่มติดต่อเพจยิมด้านล่างได้เลยครับ!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider Line with Red Accent -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- 4. Video Reel Showcase Section -->
+        <section class="video-section" id="videos">
+            <div class="section-header">
+                <span class="section-subtitle">WORKOUT & TRAINING PROOF</span>
+                <h2 class="section-title"><i class="fa-solid fa-clapperboard"></i> คลิปบรรยากาศการสอนจริง (PT TOP Showcase)</h2>
+                <p class="section-desc">วิดีโอสาธิตบรรยากาศและสภาพแวดล้อมจริงในการเข้าสอนของ PT TOP เพื่อประกอบการพิจารณา</p>
+            </div>
+
+            <!-- Video Grid (Tabs Removed for simple, unified grid loops showcase) -->
+            <div class="video-grid">
+                <!-- Video Card 1 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video autoplay loop muted playsinline preload="metadata">
+                            <source src="assets/coaching_highlight_01.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <span class="v-category-badge"><i class="fa-solid fa-video"></i> บรรยากาศการโค้ช #1</span>
+                            <button class="sound-toggle-btn" title="เปิด/ปิดเสียง"><i class="fa-solid fa-volume-xmark"></i> Muted</button>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">บรรยากาศการจัดท่าและเซฟความปลอดภัย</h4>
+                        <p class="video-desc">ดูแลสรีระอย่างใกล้ชิดเพื่อการเคลื่อนไหวที่ถูกต้องและไร้อาการบาดเจ็บระหว่างการฝึกซ้อม</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video autoplay loop muted playsinline preload="metadata">
+                            <source src="assets/coaching_highlight_02.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <span class="v-category-badge"><i class="fa-solid fa-video"></i> บรรยากาศการโค้ช #2</span>
+                            <button class="sound-toggle-btn" title="เปิด/ปิดเสียง"><i class="fa-solid fa-volume-xmark"></i> Muted</button>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">บรรยากาศการฝึกฝนทักษะเฉพาะบุคคล</h4>
+                        <p class="video-desc">การแนะแนวทางให้ลูกค้าเข้าใจจังหวะการขยับร่างกายและการผ่อนแรงอย่างมีคุณภาพ</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video autoplay loop muted playsinline preload="metadata">
+                            <source src="assets/coaching_highlight_03.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <span class="v-category-badge"><i class="fa-solid fa-video"></i> บรรยากาศการโค้ช #3</span>
+                            <button class="sound-toggle-btn" title="เปิด/ปิดเสียง"><i class="fa-solid fa-volume-xmark"></i> Muted</button>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">บรรยากาศการเทรนที่เป็นกันเองและสนุกสนาน</h4>
+                        <p class="video-desc">เสริมสร้างความคุ้นเคยกับการฝึกท่าทางใหม่ๆ ร่วมกับการให้กำลังใจอย่างเป็นมิตร</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 4 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video autoplay loop muted playsinline preload="metadata">
+                            <source src="assets/coaching_highlight_04.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <span class="v-category-badge"><i class="fa-solid fa-video"></i> บรรยากาศการโค้ช #4</span>
+                            <button class="sound-toggle-btn" title="เปิด/ปิดเสียง"><i class="fa-solid fa-volume-xmark"></i> Muted</button>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">บรรยากาศความคึกคักและการเคลื่อนไหวในยิม</h4>
+                        <p class="video-desc">การกระตุ้นและผลักดันพลังกายระหว่างจบเซ็ต เพื่อยกระดับความฟิตอย่างต่อเนื่อง</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 5 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video autoplay loop muted playsinline preload="metadata">
+                            <source src="assets/coaching_highlight_05.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <span class="v-category-badge"><i class="fa-solid fa-video"></i> บรรยากาศการโค้ช #5</span>
+                            <button class="sound-toggle-btn" title="เปิด/ปิดเสียง"><i class="fa-solid fa-volume-xmark"></i> Muted</button>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">บรรยากาศการเตรียมความพร้อมของร่างกาย</h4>
+                        <p class="video-desc">การอธิบายรายละเอียดท่าพื้นฐานและการยืดกล้ามเนื้อก่อนเริ่มซ้อมตามเป้าหมายหลัก</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider Line with Red Accent -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- 5. Skills & Specialization Section -->
+        <section class="skills-section">
+            <div class="section-header">
+                <span class="section-subtitle">CORE COMPETENCIES</span>
+                <h2 class="section-title"><i class="fa-solid fa-list-check"></i> ทักษะความเชี่ยวชาญ (Skills)</h2>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill 1 -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="red-square-bullet"></span>
+                        <h3 class="skill-title">การสร้างกล้ามเนื้อ</h3>
+                    </div>
+                    <p class="skill-desc">
+                        เวทเทรนนิ่ง จัดตาราง Split Routine แกะท่าละเอียด ปลอดภัยสำหรับมือใหม่
+                    </p>
+                    <ul class="skill-points">
+                        <li><i class="fa-solid fa-check text-red"></i> ออกแบบการซ้อมเจาะจงแต่ละกลุ่มกล้ามเนื้อ</li>
+                        <li><i class="fa-solid fa-check text-red"></i> สอนเทคนิค Mind-Muscle Connection</li>
+                    </ul>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="red-square-bullet"></span>
+                        <h3 class="skill-title">ลดไขมัน</h3>
+                    </div>
+                    <p class="skill-desc">
+                        ปรับรูปร่าง โปรแกรมเจาะจงเพื่อหุ่นลีน เฟิร์มกระชับ เห็นผลยั่งยืน
+                    </p>
+                    <ul class="skill-points">
+                        <li><i class="fa-solid fa-check text-red"></i> เผาผลาญไขมันสะสมโดยไม่สูญเสียมวลกล้ามเนื้อ</li>
+                        <li><i class="fa-solid fa-check text-red"></i> ติดตามวัดสัดส่วนและเปอร์เซ็นต์ไขมันอย่างเป็นระบบ</li>
+                    </ul>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="red-square-bullet"></span>
+                        <h3 class="skill-title">การกิน & โภชนาการ</h3>
+                    </div>
+                    <p class="skill-desc">
+                        แนะนำการกินสารอาหารตามเป้าหมายแต่ละบุคคล และ Flexible Diet ไม่ต้องอด
+                    </p>
+                    <ul class="skill-points">
+                        <li><i class="fa-solid fa-check text-red"></i> คำนวณ BMR / TDEE และ Macro สารอาหาร</li>
+                        <li><i class="fa-solid fa-check text-red"></i> ปรับเมนูอาหารให้เข้ากับไลฟ์สไตล์การทำงานประจำ</li>
+                    </ul>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="red-square-bullet"></span>
+                        <h3 class="skill-title">คาร์ดิโอ & HIIT</h3>
+                    </div>
+                    <p class="skill-desc">
+                        ออกแบบโปรแกรมให้เผาผลาญไขมัน และเพิ่มสมรรถภาพหัวใจและหลอดเลือด
+                    </p>
+                    <ul class="skill-points">
+                        <li><i class="fa-solid fa-check text-red"></i> รวมท่าการออกกำลังกายที่สนุก ไม่น่าเบื่อ</li>
+                        <li><i class="fa-solid fa-check text-red"></i> เพิ่มความฟิตและมวลปอด/หัวใจให้แข็งแรง</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider Line with Red Accent -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- Official Freelance Booking Footer (Updated with user's specific context & FB Profile link) -->
+        <footer class="gym-booking-footer" id="booking-footer">
+            <div class="booking-card">
+                <div class="booking-icon">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <div class="booking-content">
+                    <span class="booking-tag"><i class="fa-solid fa-user-tie"></i> FREELANCE PERSONAL TRAINER</span>
+                    <h3 class="booking-title">สนใจเริ่มต้นเทรนกับ PT TOP?</h3>
+                    <p class="booking-desc">
+                        ท็อปเป็นเทรนเนอร์ฟรีแลนซ์ หากคุณสแกน QR Code เข้ามาเห็นเว็บนี้และสนใจที่จะเรียนเทรนกับท็อป สามารถติดต่อแจ้งเรื่องสมัครเรียนได้ที่เพจยิม <strong>French Gym</strong> โดยระบุชื่อจริงของผมคือ <strong>ศิวกร สมรักษ์ (PT TOP)</strong> ได้เลยครับ
+                    </p>
+                    
+                    <!-- Interactive Booking Action Bar -->
+                    <div class="booking-action-bar">
+                        <!-- Copy Area -->
+                        <div class="copy-text-field">
+                            <span class="field-label">กดคัดลอกข้อความเพื่อนำไปวางส่งแชทเพจยิม:</span>
+                            <div class="field-value-wrapper">
+                                <input type="text" id="booking-message-input" value="สนใจสมัครเรียนเทรนกับ PT TOP (ศิวกร สมรักษ์) ครับ/ค่ะ" readonly>
+                                <button class="action-btn copy-btn" onclick="copyBookingMessage()" title="กดเพื่อคัดลอกข้อความ">
+                                    <i class="fa-solid fa-copy"></i> คัดลอกข้อความ
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Direct Link to Gym Page Timeline Profile -->
+                        <a href="https://www.facebook.com/profile.php?id=100084066556197" target="_blank" class="action-btn direct-msg-btn">
+                            <i class="fa-brands fa-facebook"></i> ไปที่หน้าเพจ French Gym
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright-bar">
+                <p>© 2026 PT TOP (SIWAKORN SOMRAK) - Freelance Personal Trainer Showcase Page</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal Lightbox for HD Certificate / Comparison Viewing -->
+    <div class="cert-modal" id="certModal">
+        <div class="modal-backdrop" onclick="closeCertModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close-btn" onclick="closeCertModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header-info">
+                <span class="modal-badge" id="modalBadge">PREVIEW</span>
+                <h3 class="modal-title" id="modalTitle">รายละเอียดภาพขยาย</h3>
+                <p class="modal-subtitle" id="modalSubtitle">คำอธิบายภาพหลักฐาน</p>
+            </div>
+            <div class="modal-body-img">
+                <img src="" alt="HD Resolution Preview" id="modalImg">
+            </div>
+            <div class="modal-footer-note">
+                <i class="fa-solid fa-circle-info"></i> ภาพหลักฐานจริงเพื่อแสดงความโปร่งใสและผลลัพธ์ที่พิสูจน์ได้
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom toast element for copying notification -->
+    <div class="toast-notification" id="toastNotif">
+        <i class="fa-solid fa-circle-check"></i> คัดลอกข้อความสมัครเรียนแล้ว! สามารถนำไปวางส่งหน้าแชทเพจยิมได้เลย
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
