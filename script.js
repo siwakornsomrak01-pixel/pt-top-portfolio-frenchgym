@@ -125,11 +125,15 @@ function showToastNotification() {
     const toast = document.getElementById("toastNotif");
     if (!toast) return;
 
+    // Reset inline styling to allow CSS transition rules to take charge cleanly
+    toast.style.display = ""; 
     toast.classList.add("show");
+    
     setTimeout(() => {
         toast.classList.remove("show");
     }, 3000);
 }
+
 
 /* --- 5. Certificate Lightbox Modal --- */
 function openCertModal(certKey) {

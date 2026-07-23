@@ -900,10 +900,11 @@
         </div>
     </div>
 
-    <!-- Custom toast element for copying notification -->
-    <div class="toast-notification" id="toastNotif">
+    <!-- Custom toast element for copying notification (Set to hidden initially to prevent FOUC / mobile flash bug) -->
+    <div class="toast-notification" id="toastNotif" style="display: none;">
         <i class="fa-solid fa-circle-check"></i> คัดลอกข้อความสมัครเรียนแล้ว! สามารถนำไปวางส่งหน้าแชทเพจยิมได้เลย
     </div>
+
 
     <script src="script.js"></script>
 </body>
